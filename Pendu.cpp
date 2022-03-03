@@ -65,9 +65,7 @@ void Pendu::init() {
 }
 
 void Pendu::Display() {
-    DrawMan();
-    cout << "Welcome..." << endl;
-    cout << "I am thinking of a word:" << endl;
+    cout << "\nWelcome..." << endl;
 
     try {
         if (!find_word())
@@ -82,6 +80,8 @@ void Pendu::Display() {
         }
 
         while (!gameOver) {
+            DrawMan();
+            cout << "\nI am thinking of a word:" << endl;
             cout << "\nYou have " << get_remainingTries() << " remaining tries" << endl;
             cout << "\nwhat is the secret word?" << endl;
             for (i = 0; i < wordsize; i++) {
@@ -96,7 +96,9 @@ void Pendu::Display() {
             if (!findLetter()) {
                 remainingTries--;
             }
+
             gameOver = (get_remainingTries() <= 0 || win());
+            system("CLS");
         }
     } catch (...) {
     }
@@ -118,7 +120,6 @@ void Pendu::DrawMan() {
     cout << endl;
     cout << "  |" << endl;
     cout << "__|__" << endl;
-    cout << "\n";
 }
 
 void Pendu::Reset() {
