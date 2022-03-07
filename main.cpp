@@ -1,9 +1,11 @@
-using namespace std;
-#include <conio.h>
 
 #include <iostream>
+using namespace std;
 
-#include "Pendu.h"
+#include <conio.h>
+
+// include "Pendu.h" -> can cause some linker issues in some IDES
+#include "Pendu.cpp"  // use this instead
 
 int main() {
     Pendu p;
@@ -22,5 +24,6 @@ int main() {
             keepPlaying = false;
         }
     }
+    system("pause");
     return 0;
 }

@@ -1,13 +1,13 @@
-#pragma once
 
-using namespace std;
+#include <conio.h>
 #include <ctype.h>
-#include <stdio.h>
 
 #include <cstring>
 #include <ctime>
 #include <fstream>
 #include <iostream>
+using namespace std;
+
 #include <string>
 #include <vector>
 
